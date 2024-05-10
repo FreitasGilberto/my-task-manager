@@ -9,11 +9,14 @@ function TodoList() {
   const [editTaskTitle, setEditTaskTitle] = useState("");
   const [editTaskDescription, setEditTaskDescription] = useState("");
 
+  const maxTitleLength = 30;
+
   const handleAddTask = () => {
     if (!newTaskTitle.trim() || !newTaskDescription.trim()) return;
+    const truncatedTitle = newTaskTitle.substring(0, maxTitleLength);
     setTasks([
       ...tasks,
-      { title: newTaskTitle, description: newTaskDescription },
+      { title: truncatedTitle, description: newTaskDescription },
     ]);
     setNewTaskTitle("");
     setNewTaskDescription("");
@@ -27,9 +30,10 @@ function TodoList() {
 
   const handleUpdateTask = () => {
     if (!editTaskTitle.trim() || !editTaskDescription.trim()) return;
+    const truncatedTitle = editTaskTitle.substring(0, maxTitleLength);
     const updatedTasks = [...tasks];
     updatedTasks[editTaskIndex] = {
-      title: editTaskTitle,
+      title: truncatedTitle,
       description: editTaskDescription,
     };
     setTasks(updatedTasks);
@@ -41,16 +45,28 @@ function TodoList() {
     setTasks(updatedTasks);
   };
 
+  const handleTitleChange = (event) => {
+    const { value } = event.target;
+    if (value.length <= maxTitleLength) {
+      setNewTaskTitle(value);
+    }
+  };
+
+  const charactersLeft = maxTitleLength - newTaskTitle.length;
+
   return (
     <div className="todo-list-container">
       <h1>Todo List</h1>
       <div className="add-task-section">
         <h2>Add New Task:</h2>
+        <span className="characters-left">
+          Characters left: {charactersLeft}
+        </span>
         <input
           type="text"
           placeholder="Title"
           value={newTaskTitle}
-          onChange={(e) => setNewTaskTitle(e.target.value)}
+          onChange={handleTitleChange}
         />
         <textarea
           placeholder="Description"
@@ -64,11 +80,11 @@ function TodoList() {
         <ul>
           {tasks.map((task, index) => (
             <li key={index}>
-              <div>
+              <div className="task-item">
                 <strong>{task.title}</strong>
                 <p>{task.description}</p>
               </div>
-              <div>
+              <div className="editing-button">
                 <button onClick={() => handleEditTask(index)}>Edit</button>
                 <button onClick={() => handleDeleteTask(index)}>Delete</button>
               </div>

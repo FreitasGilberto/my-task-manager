@@ -3,28 +3,64 @@
     margin: 0 auto;
     padding: 20px;
   }
+
+  .characters-left {
+    font-size: 10px; 
+    color: #888;
+    text-align: end;
+  }
   
+  .add-task-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-task-section textarea {
+    margin-top: 10px; 
+    resize: none;
+  }
+
   .add-task-section,
   .edit-task-section {
     margin-bottom: 20px;
   }
   
+  /* Estilos para los inputs */
   input[type="text"],
   textarea {
-    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
     margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box; 
+  }
+  
+
+  input[type="text"]:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #66afe9; 
+    box-shadow: 0 0 5px #66afe9; 
   }
   
   button {
+    padding: 10px 20px;
     background-color: #007bff;
-    color: white;
+    color: #fff;
     border: none;
-    padding: 8px 16px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-out; 
   }
   
+
   button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; 
+    transition-delay: 0.1s;
+
   }
   
   ul {
@@ -39,7 +75,7 @@
     border-radius: 5px;
   }
   
-  li div {
+  .editing-button {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,5 +89,27 @@
   .edit-task-section input[type="text"],
   .edit-task-section textarea {
     margin-bottom: 10px;
+
+  }
+
+  
+  .task-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .task-item strong {
+    font-size: 18px;
+  }
+  
+  .task-item p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .task-item button {
+    margin-top: 5px;
   }
   

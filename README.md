@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+## Task Manager Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a task management application built using React. The objective was to create an intuitive interface allowing users to manage tasks efficiently.
 
-## Available Scripts
+### Objective:
+The main goal was to develop a task management application with features including viewing, adding, updating, and deleting tasks.
 
-In the project directory, you can run:
+### Requirements:
+1. **Task List Display:** Display a list of tasks with options to mark as completed or delete.
+2. **Add New Task:** Provide a form to add new tasks.
+3. **Edit Existing Task:** Allow users to edit task details.
+4. **Delete Task:** Implement deletion functionality.
 
-### `npm start`
+### Instructions:
+- **React Components:** Built using React framework.
+- **State Management:** Utilized useState hooks to manage task list and form inputs.
+- **Responsiveness:** Ensured application is responsive and user-friendly.
+- **Styling:** Used basic CSS for styling, focusing more on functionality during the limited timeframe.
+- **Code Quality:** Aimed for clean, organized code with a focus on reusability and separation of concerns.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*Note: This project was completed within a tight timeframe of 30 minutes during an interview, hence the simplicity of the implementation.*
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Pending Additions:
+#### Bonus (Optional):
+For additional challenge and learning, the following features could be added:
+- **Task Filtering/Sorting:** Implement functionalities to filter or sort tasks (e.g., by status, by date).
+- **Form Validation:** Add validation for form inputs such as required fields or character limits.
+- **Data Persistence:** Integrate local storage or backend API for persisting task data.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+These features were outlined as optional during the interview process and could be considered for future enhancements.
